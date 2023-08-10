@@ -1,0 +1,12 @@
+DELI IN VLADAJ
+
+T(1)=c
+T(n)= aT(n/b) + O(n^d)
+a...stevilo podnalog, b...faktor delitve, c...zahtevnost pri n=1, n^d...zahtevnost delitve in zdruzevanja
+
+Glavni izrek deli in vladaj: formule za T(n)... a = sile zla, b^d = sile dobrega gledamo razmerje teh dveh:
+        a < b^d: vecja globina pomeni manj dela
+        a = b^d: enako dela na vseh globinah
+        a > b^d: vecja globina pomeni vec dela
+
+Najvecje podzaporedje algoritem...

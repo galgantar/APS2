@@ -1,0 +1,32 @@
+01-NAHRBTNIK (ne moremo rezati predmetov)
+
+n predmetov, P = volumen nahrbtnika
+v1,...,vn volumni
+c1,...,cn cene
+
+Bellmanova enacba za optimalno resitev:
+S(i, p) ... optimalna cena za predmete 1,...,i ce porabim p prostora
+S(i, p) = max{ S(i-1, p-v_i)+c_i, S(i-1, p) } ... predmet vzamem ali ne
+
+S(0, p) = 0
+S(i, 0) = 0
+
+v O(n*p) lahko napolnimo celo tabelo od spodaj navzgor, tko kt ponavad
+    to zgleda polinomsko, ampak ni
+    n = stevilo objektov na vhodu (nemormo z log(n) biti predstaviti tega), ce nju dodam en bit, mam en stolpec vec
+    P = volumen nahrbtnika, lahko ga podamo z log(n) biti, ce Pju dodam en bit, se tabela podvoji
+    v resnic je O(n*2^(logP)), v resnici je to eksponenten algoritem
+    ta algoritem je PSEVDOPOLINOMSKI, zgleda polinomski pa ni (ce bi bil P v polinomski odvisnosti od n bi bil polinomski)
+
+
+REZANJE PROSTORA RESITEV - ce je volumen 10000000 mam pa sam 10 predmetov
+
+ena resitev (vi, ci) ... kok volumna trenutno zasedamo in kok je trenutna cena
+
+generiramo vse podmnozice: zacnem z (0, 0), dodam (v1, c1), ko dodam (v2, c2), ga pristejem vsem dosedanjim resitvam
+    podvojimo st resitev, ce mamo resitev, ki zavzame vec volumna, da pa enako ceno, jo lahko crtamo
+    (sortiramo po volumnu, morjo bit tut cene narascujoce)
+
+    optimalna resitev je tista, ki je na koncu urejenega seznama po koncu tega postopka
+
+    v teoriji se vedno eksponentno, ampak v praksi dela relativno hitro

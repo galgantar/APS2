@@ -1,0 +1,26 @@
+NAJVECJI PRETOK
+
+Veljaven pretok: najenostavneje 0, maksimiziramo pretok
+
+Pot p je zasicena, ce ima vsaj ena pozitivna povezava na poti pretok enak omejitvi ali ena negativna povezava (v obratno
+    smer) ima pretok enak 0
+
+Izrek: imamo najvecji pretok, ko ne obstaja nobena zasicena pot vec
+
+Ti vozlisce OZNACIS, ce si najdu povecanje do njega
+
+Obiscemo vsa vozlisca, damo oznako +/- ali smo prisli po pozitivni ali negativni, predhodnika in kok bi se lahko povecal pretok
+    za pozitivne: delta_j = min(delta_i, c_ij - x_ij)
+    za negativne: delta_j = min(delta_i, x_ij)
+
+Obiskujemo samo vozlisca, do katerih smo povezani prek nezasicene (pozitivne - x<c, negativne - x > 0) povezave!!
+
+Ce mi uspe oznacit ponor, sem nasu povecujoco pot, ustrezno povecam/zmanjsam pretoke na teh povezavah -> koncni pretok smo
+    povecali za delta
+
+Ko ne moremo iz oznacenih vozlisc nikamor vec - OZNACENA vozlisca tvorijo minimalni prerez
+
+Cim prides do vozlisca in najdes povecanje, tega vozlisca ne upostevas vec - bos ze v naslednji iteraciji nasu se kksnega
+
+Kako preiskujes se ti lahko odlocis, BFS, DFS karkoli, lahko tut neke hevristike, kje do zdej zgleda, da se mi bo najbl splacal
+

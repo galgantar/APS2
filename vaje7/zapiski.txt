@@ -1,0 +1,28 @@
+DISKRETNA FURIEJEVA TRANSFORMACIJA:
+
+polinom == signal/valovanje
+
+koeficientna (a0,...,an) ali vrednostna (y1,...,yn) - vrednosti v n+1 fiksnih tockah
+iz koeficientne v vrednostno - hornerjev alg/evalvacija v O(n^2)
+iz vrednostne v koeficientno - interpolacija s polinomom skozi n tock
+v vrednostni se polinome mnozi v linearnem casu
+
+
+N-TI PRIMITIVNI KOREN ENOTE
+omega^n=1
+omega^(od vkljucno 1 do manj kot n) != 1
+
+V kompleksnih: omega=e^((2pi/n)i)
+V obsegu Zp: 
+    npr 4ti PKE: omega^4=1, omega^1,2,3 != 1 tadva pravila preveris, vidis, da 2 in 3 ustrezata
+    nti PKE-ji se pojavljajo v parih - so invez en drugemu
+
+
+DFT:
+mamo matriko F, ki, ko pomnozimo F*koeficientna dobimo vrednostno
+F[i, j] = omega^(i-1)*(j-1)
+
+INVERZNI DFT:
+F^-1 = 1/n * [omega^-(i-1)*(j-1)]
+
+DFT vzame O(n^2) ker mnozimo matrike se da s FFT pohitrit na O(nlogn)

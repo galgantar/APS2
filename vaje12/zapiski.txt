@@ -1,0 +1,21 @@
+Najkrajse poti - BELLMAN FORD
+    uporabla dinamicno programiranje
+
+    pocasnejsi od Dijkstre, ampak dopuscamo negativne povezave
+    negativnih ciklov itak ne sme bit - razdalja med vsemi je -inf
+
+    iscemo poti od vozlisca 1 do vozlisca i, ki ima max h povezav:
+        d(1, h) = 0 (nimamo negativnih ciklov)
+        d(i, h) = min[d(i, h - 1), min{j!=i}(d(j, h-1) + c_ji)]
+
+        CE DELAS NA ROKE: gledas vhodne sosede od i na prejsnji iteraciji, ali se da od kksnega od njih cenej pridt !!!
+
+        rezultat: d(i, n-1)
+    
+        ce se tabela po n-1 iteracijah (v n-ti iteraciji) spremeni - imamo negativen cikel
+
+
+        prostorska: rabis 2n = O(n) prostora - hranis samo prejsnjo vrstico
+
+
+Tudi s topoloskim urejanjem (tak vrstni red) lahko naracunas vrednosti v tej tabeli

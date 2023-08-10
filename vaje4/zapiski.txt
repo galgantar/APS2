@@ -1,0 +1,27 @@
+UREJANJA V O(n)
+
+UREJANJE S STETJEM (osnova za korensko urejanje):
+
+tabelo bitov 0,1,0,0,1 lahko samo prestejemo kok je nicel, jih tok napises in pol das enke,
+    to je linearno urejanje
+enako za tabelo stevil od 0 do 3 - samo prestejes kok je 0,1,2,3 in pol ustrezno premeces,
+    tudi to je linearno
+lahko bi tut zaporednoma s stabilnim urejanjem: najprej po enicah, pol po deseticah, 
+    stoticah... (zaporedno stabilno urejanje zacnemo z najmanj pomembnim atributom)
+
+mi prestejemo ker ma kaksno vrednost (zadnja stevka ali prvi element n-tevice...)
+    c1=[2,3,3,4], iz tega preracunamo, na kaksnem indeksu se moreju zacet keri 
+    (na vsakem novem mestu je vsota vseh prej npr c[1]=stari_c[0]+stari_c[1]) c=[2,5,8,12] (5=2+3)
+pol gremo cez originalni seznam in ko naletimo na enga ki spada na tretje mesto, 
+    povecamo stevilo na indeksu 2 za ena in ga v novem steznamu damo na vrednost tega indeksa
+
+Dobili smo stabilno urejanje v linearnem casu 
+
+
+KORENSKO UREJANJE (klicemo urejanje s stetjem za vsako mesto posebi):
+
+Stevila, uredimo najprej po enicah, deseticah... (z urejanjem s stetjem) ko koncamo imamo
+    urejen seznam stevil
+
+Minus je da pol rabmo fulkrat pregredat ta seznam ce mamo velik stevk al pa ce mamo floate, teoreticno O(n),
+    v praksi je pocasnejse

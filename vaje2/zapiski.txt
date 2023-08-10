@@ -1,0 +1,23 @@
+BUBBLE SORT:
+    mehurcki ki plavajo proti povrsju - potiskamo najvecje stevilo navzgor
+    primerjamo levega z desnim, ce je levi vecji jih zamenjamo
+    na zadnjem delu mamo urejen del seznama
+    O(n^2)
+
+SELECTION SORT:
+    poiscemo najmanjsi element in ga zamenjamo s prvim elementom v neurejenem delu
+    O(n^2)
+
+INSERTION SORT:
+    na levi imamo urejeni del
+    vzamemo prvi del neurejenega dela in gremo v levo, dokler njegov levi ni
+        manjsi od njega, potem ga damo tja in vse za njim zamaknemo za eno desno
+    O(n^2)
+    ce je seznam ze urejen dela zelo hitro v O(n^2)
+
+UREJANJE S KOPICO (HEAPSORT):
+    kopica - urejeno (oce manjsi od otrok), levo uravnotezeno drevo (vsi nivoji
+        razn zadnjega so polni)
+    iz seznama v kopico in obratno: samo po nivojih in iz leve proti desni
+    vozlisce i ima otroka 2i + 1, 2i + 2
+    

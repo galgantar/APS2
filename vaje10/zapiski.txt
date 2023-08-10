@@ -1,0 +1,24 @@
+DINAMICNO PROGRAMIRANJE
+
+za razliko od Divide and Conquer je grajenje resitve iz resitve podproblemov bolj komplicirano
+
+imamo Bellmanovo enacbo, kjer povemo, kako iz manjsih zgradimo vecjo
+
+lahko delamo od zgoraj navzdol (z memoizacijo) ali od spodaj navzgor
+
+
+SPUSCANJE JAJC:
+
+ce k=1 mam sam eno jajce, mormo nujno od prvega po vseh do zadjnega pa vsakic vrzt, da tocno vem, kdaj se razbije
+z bisekcijo lahko vedno najdem v log(n)
+
+ce mamo dve jajci k=2, lahko najprej vrzemo iz n/2 nadstropja, pa vemo v keri polovici smo, pol mormo vse probat ce se razbije,
+    sicer lahko se naprej delamo bisekcijo
+
+funkcija, ki pove, kok najvec metov bomo rabil: s(n, k)
+s(n, 1)=n
+s(0, k)=0
+
+Bellmanove enacbe: en met mi definira dva podporblema: al se je razbiu pa mam en jajc mn k-=1, pa vem da sm v spodni polovici,
+    al se pa ni in je k=k pa vem da sm v zgornji - grem z zanko cez vse in vrzem jajce iz unga stuka, pa pogledam, kaj se
+    pol rekurzivno zgodi (gledamo max(s(x-1, k-1), s(n-x, k))) - gledamo max ali se razbije ali se ne

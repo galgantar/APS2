@@ -1,0 +1,23 @@
+QUICKSORT:
+    izberes pivot, vse ki so vecji das na eno stran, vse ki so manjsi na drugo stran: 
+        razdelimo tabelo na tri podtabele (to lahko v linearnem casu - menjas enga vecjega
+        za enga manjsega), pol rekurzivno klices deli in vladaj
+    ce vsakic zberemo mediano za povot smo v O(nlogn), v najslabsem primeru O(n^2)
+    je in-place sort, vse se dela v istem seznamu, ni prostorsko potraten
+
+MERGESORT:
+    imamo dve urejeni zaporedji - lahko jih zlijemo tko, da mamo za vsazga en indeks,
+        zbiramo tistga iz obeh, ki je manjsi in tist indeks premaknemo za ena naprej
+    seznam razbijemo na dva dela, to pocnemo dokler nismo pri seznamih dolzine 1 - te so
+        ze urejeni, pol te podsezname mergamo med sabo
+    prostorska zahtevnost je O(2n) - vsakic rabmo sam prejsnji in naslednji nivo seznamov
+    
+    Mergesort je STABILNO UREJANJE - mergesort ne menja vrstnega reda dveh enakih elementov,
+        ce ni treba [1, 2, 1] je gotovo da leva 1 ne bo prehitela druge, ce bi npr hotl
+        sortirat po imenih in pol se po priimkih najprej sortiramo po manj pomembnem, pol
+        pa se enkrat po bolj pomembnem in mamo, java ko sortira inte klice quicksort, ko
+        sortira objekte pa mergesort
+
+ponavadi je quicksort hitrejsi kot mergesort - raje uporabljamo tega
+v implementacijah nam rekurzija da tok overheada, da se ko je npr len < 10, kar klice
+    insertion sort
